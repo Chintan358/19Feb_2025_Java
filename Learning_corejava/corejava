@@ -29,6 +29,17 @@ Arithmatic operator :
 Unary : 
 ++,--
 
+Statements : 
+conditional
+-if-else
+-switch-case
+
+looping :
+for, while, do-while
+
+control : 
+break, continue
+
 
 
 
