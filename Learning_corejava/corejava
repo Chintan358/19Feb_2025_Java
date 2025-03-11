@@ -47,6 +47,35 @@ OOPs : Object oriented programming
 POP - procedure oriented programing
 
      
+class : 
+logical entity
+
+object : 
+Real time entity
+
+state    / variables / data member
+behaviour/ methods / function member
+
+ex : 
+accessmodifier retruntype* methodname(args)
+{
+	//body
+}
+public void print()
+{
+	//logic
+}
+
+object : 
+Demo d1 = new Demo()
+
+*******************
+members can be of 2 types:
+static / class memeber  and non-static / instance 
+
+     
+     
+     
 
 
 
