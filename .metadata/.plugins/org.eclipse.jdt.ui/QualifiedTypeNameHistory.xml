@@ -3,4 +3,10 @@
     <fullyQualifiedTypeName name="java.awt.MenuBar"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="oops.Pen"/>
+    <fullyQualifiedTypeName name="oops.Student"/>
+    <fullyQualifiedTypeName name="oops.Demo"/>
+    <fullyQualifiedTypeName name="oops.Calc"/>
+    <fullyQualifiedTypeName name="oops.Run"/>
+    <fullyQualifiedTypeName name="oops.Sample"/>
 </qualifiedTypeNameHistroy>
