@@ -73,6 +73,8 @@ Demo d1 = new Demo()
 members can be of 2 types:
 static / class memeber  and non-static / instance 
 
+
+
      
      
      
