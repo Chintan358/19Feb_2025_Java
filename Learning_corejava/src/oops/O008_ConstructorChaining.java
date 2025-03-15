@@ -25,6 +25,7 @@ class Q extends P
 
 class R extends Q
 {
+	int k = 10;
 	R()
 	{
 		super("Sitesh");
