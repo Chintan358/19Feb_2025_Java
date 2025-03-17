@@ -75,6 +75,29 @@ Demo d1 = new Demo()
 members can be of 2 types:
 static / class memeber  and non-static / instance 
 
+Abstraction :
+
+hiding the implimantation and showing only functinality
+
+
+Abstract class : partial
+contains abstract and instance method both
+
+Interface : fully
+only abstract methods
+
+**************
+abstract method
+- method without body.
+
+ex : public void display();
+
+INstance method
+
+ex : public void display()
+	{
+	}
+
 
 
      
