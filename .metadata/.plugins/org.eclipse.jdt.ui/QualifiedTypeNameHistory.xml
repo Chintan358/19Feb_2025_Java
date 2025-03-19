@@ -13,4 +13,6 @@
     <fullyQualifiedTypeName name="oops.AccessDemo"/>
     <fullyQualifiedTypeName name="oops.Calc1"/>
     <fullyQualifiedTypeName name="oops.L"/>
+    <fullyQualifiedTypeName name="oops.AbsImpl"/>
+    <fullyQualifiedTypeName name="oops.InterImpl"/>
 </qualifiedTypeNameHistroy>
