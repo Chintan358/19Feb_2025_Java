@@ -24,9 +24,9 @@ public class StringMEthods {
 //			System.out.println(ch[i]);
 //		}
 		
-		byte b[] = str.getBytes();
-		for (int i = 0; i < b.length; i++) {
-			System.out.println(b[i]);
-		}
+//		byte b[] = str.getBytes();
+//		for (int i = 0; i < b.length; i++) {
+//			System.out.println(b[i]);
+//		}
 	}
 }
