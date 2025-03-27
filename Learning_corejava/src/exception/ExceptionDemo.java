@@ -26,6 +26,9 @@ public class ExceptionDemo {
 		{
 			e.printStackTrace();
 		}
+		finally {
+			//always executable
+		}
 		
 		System.out.println("Program ended");
 	}
