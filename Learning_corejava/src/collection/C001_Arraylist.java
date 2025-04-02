@@ -1,6 +1,7 @@
 package collection;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class C001_Arraylist {
@@ -11,7 +12,7 @@ public class C001_Arraylist {
 			//default size : 10
 			//new size = oldsize*3/2 +1 = 10*3/2 + 1 = 16
 			ArrayList<String> al = new ArrayList<String>();
-			al.add("Java");
+			al.add("java");
 			al.add("php");
 			al.add("android");
 			al.add(".net");
@@ -21,21 +22,25 @@ public class C001_Arraylist {
 //			al.remove(1);
 //			System.out.println(al.size());
 			
-//			for(String s : al)
-//			{
-//				System.out.println(s);
-//			}
+			Collections.sort(al);
+			
+			for(String s : al)
+			{
+				System.out.println(s);
+			}
 //			
 //			System.out.println(al.get(2));
 			
 			
 			
-			ArrayList list = new ArrayList();
-			list.add(10);
-			list.add("test");
-			list.add('A');
-			list.add(12.36);
-			list.addAll(al);
+//			ArrayList list = new ArrayList();
+//			list.add(10);
+//			list.add("test");
+//			list.add('A');
+//			list.add(12.36);
+//			list.addAll(al);
+//			
+//			Collections.sort(list);
 			
 //			for(Object o : list)
 //			{
@@ -43,11 +48,11 @@ public class C001_Arraylist {
 //			}
 			
 			
-			Iterator<Object> itr = list.iterator();
-			while(itr.hasNext())
-			{
-				System.out.println(itr.next());
-			}
+//			Iterator<Object> itr = list.iterator();
+//			while(itr.hasNext())
+//			{
+//				System.out.println(itr.next());
+//			}
 			
 		}
 }
