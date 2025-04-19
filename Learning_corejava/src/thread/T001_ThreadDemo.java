@@ -12,7 +12,7 @@ class Th1 extends Thread
 		for(int i=1;i<=10;i++)
 		{
 			try {
-				sleep(1000);
+				sleep(2000);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

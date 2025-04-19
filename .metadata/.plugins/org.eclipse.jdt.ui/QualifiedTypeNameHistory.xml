@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="oops.L"/>
-    <fullyQualifiedTypeName name="oops.AbsImpl"/>
-    <fullyQualifiedTypeName name="oops.InterImpl"/>
-    <fullyQualifiedTypeName name="oops.State"/>
-    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
-    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
     <fullyQualifiedTypeName name="impclasses.Test"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
@@ -59,5 +51,13 @@
     <fullyQualifiedTypeName name="thread.Th1"/>
     <fullyQualifiedTypeName name="thread.Th2"/>
     <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="thread.Customer"/>
+    <fullyQualifiedTypeName name="thread.Account"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="thread.Calc"/>
     <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="thread.Maths"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="practice.Std"/>
 </qualifiedTypeNameHistroy>

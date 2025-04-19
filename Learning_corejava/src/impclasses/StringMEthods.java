@@ -11,7 +11,7 @@ public class StringMEthods {
 //		System.out.println(str.charAt(7));
 //		System.out.println(str.indexOf('S'));
 //		System.out.println(str.substring(6,8));
-//		System.out.println(str.replace('s', 'K'));
+		System.out.println(str.replace('s', 'K'));
 //		System.out.println(str.trim());
 		
 //		String words[] =  str.split(" ");
