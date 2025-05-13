@@ -199,7 +199,7 @@ public class Crud {
 					{
 						JOptionPane.showMessageDialog(frame, "Data deleted");
 						load();
-					}
+						id.setText("");					}
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -211,10 +211,77 @@ public class Crud {
 		frame.getContentPane().add(btnDelete);
 		
 		JButton btnUpdate = new JButton("Update");
+		btnUpdate.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				int userid = Integer.parseInt(id.getText());
+				
+				try {
+					PreparedStatement ps  =cn.prepareStatement("select * from student where id = ?");
+					ps.setInt(1, userid);
+					
+					ResultSet rs = ps.executeQuery();
+					
+					if(rs.next())
+					{
+						uname.setText(rs.getString(2));
+						email.setText(rs.getString(3));
+						phone.setText(rs.getString(4));
+					}
+					else
+					{
+						JOptionPane.showMessageDialog(frame, "Id not found");
+					}
+				
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				
+			}
+		});
 		btnUpdate.setBounds(113, 354, 130, 23);
 		frame.getContentPane().add(btnUpdate);
 		
 		JButton btnUpdate_1 = new JButton("update");
+		btnUpdate_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				int userid = Integer.parseInt(id.getText());
+				String myname = uname.getText();
+				String myemail = email.getText();
+				String myphone = phone.getText();
+				
+				try {
+					PreparedStatement ps = 
+							cn.prepareStatement("update student set name=?,email=?,phone=? where id=?");
+					ps.setString(1, myname);
+					ps.setString(2, myemail);
+					ps.setString(3, myphone);
+					ps.setInt(4, userid);
+					
+					int i = ps.executeUpdate();
+					if(i>0)
+					{
+						JOptionPane.showMessageDialog(frame, "User Updated");
+						load();
+						id.setText("");
+						uname.setText("");
+						email.setText("");
+						phone.setText("");
+					}
+							
+				
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				
+				
+			}
+		});
 		btnUpdate_1.setBounds(113, 232, 130, 23);
 		frame.getContentPane().add(btnUpdate_1);
 	}
