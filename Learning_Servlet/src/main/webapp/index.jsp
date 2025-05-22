@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,26 +100,11 @@
 
 
     <div class="container">
-    <!-- <div class="row">
-
-        <div class="col-4 bg-success">1</div>
-        <div class="col-6 bg-primary">2</div> 
-       <div class="col-1 bg-danger">3</div>
-        <div class="col-1 bg-warning">4</div>
-        <div class="col-1 bg-secondary">5</div>
-        <div class="col-1 bg-info">6</div>
-        <div class="col-1 bg-dark">7</div>
-        <div class="col-1 bg-success">8</div>
-        <div class="col-1 bg-muted">9</div>
-        <div class="col-1 bg-success">10</div>
-        <div class="col-1 bg-white">11</div>
-        <div class="col-1 bg-success">12</div> 
-        </div>
-        <div class="row"> -->
+   
     <div class="col-md-5 col-lg-5 col-sm-12 mx-auto mt-5 p-5 card">
     <h2>Registration Form</h2>
         <hr>
-    <form action="">
+    <form action="reg" method="post">
 
         <div class="form-group">
         <label for="uname">Username</label>
