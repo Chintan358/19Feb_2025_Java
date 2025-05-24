@@ -103,7 +103,7 @@
     <div class="col-md-5 col-lg-5 col-sm-12 mx-auto mt-5 p-5 card">
     <h2>Registration Form</h2>
         <hr>
-         ${msg}
+        <span class="text-success">${msg}</span> 
  
     <form action="reg" method="post">
 		
@@ -136,6 +136,7 @@
         <br>
         <input type="submit" class="btn btn-success" id="smbtn">
         <input type="reset" class="btn btn-info">
+        <a href="display">View All Users</a>
     </form> 
 </div>
 </div>
