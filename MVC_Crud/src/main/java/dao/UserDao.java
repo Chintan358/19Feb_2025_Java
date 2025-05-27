@@ -72,6 +72,73 @@ public class UserDao {
 		
 		return users;
 	}
+
+	public int deleteUser(int id) {
+		int i = 0;
+		
+		try {
+			PreparedStatement ps  =
+					cn.prepareStatement("delete from user where id = ?");
+			ps.setInt(1, id);
+			
+			i = ps.executeUpdate();
+		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return i;
+	}
+
+	public User userById(int id) {
+		
+		User user = new User();
+		
+		try {
+			PreparedStatement ps = 
+					cn.prepareStatement("select * from user where id=?");
+			
+			ps.setInt(1, id);
+			
+			ResultSet rs  =ps.executeQuery();
+			
+			if(rs.next())
+			{
+				user.setId(rs.getInt(1));
+				user.setUsername(rs.getString(2));
+				user.setEmail(rs.getString(3));
+				user.setPassword(rs.getString(4));
+			}
+			
+		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return user;
+	}
+
+	public int updateUser(User user) {
+	
+		int i = 0;
+		try {
+			PreparedStatement ps =
+					cn.prepareStatement("update user set name=?,email=?,pass=? where id = ?");
+			ps.setString(1, user.getUsername());
+			ps.setString(2, user.getEmail());
+			ps.setString(3, user.getPassword());
+			ps.setInt(4 , user.getId());
+			
+			i = ps.executeUpdate();
+		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return i;
+	}
 	
 	
 }
