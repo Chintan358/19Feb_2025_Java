@@ -8,41 +8,39 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import model.User;
 
-@WebServlet("/reg")
-public class RegController extends HttpServlet{
-	
+@WebServlet("/login")
+public class LoginController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		String uname = req.getParameter("uname");
+		
 		String email = req.getParameter("email");
 		String pass = req.getParameter("pass");
 		
+		
 		User user = new User();
-		user.setUsername(uname);
 		user.setEmail(email);
 		user.setPassword(pass);
 		
-		UserDao dao = new UserDao();
 		
-		if(dao.isEmailExist(email))
+		UserDao dao = new UserDao();
+		User u = dao.loginCheck(user);
+		
+		
+		if(u==null)
 		{
-			req.setAttribute("err", "Email Already exist !!!");
-			req.getRequestDispatcher("index.jsp").forward(req, resp);
-
+			req.setAttribute("err", "Invalid credentials");
+			req.getRequestDispatcher("login.jsp").forward(req, resp);
 		}
 		else
 		{
-			int i =  dao.addUser(user);
-			if(i>0)
-			{
-				req.setAttribute("msg", "Registration successfully !!!");
-				req.getRequestDispatcher("index.jsp").forward(req, resp);
-			}
+			HttpSession session = req.getSession();
+			session.setAttribute("user", u.getUsername());
+			req.getRequestDispatcher("display").forward(req, resp);
 		}
-		
 		
 		
 		

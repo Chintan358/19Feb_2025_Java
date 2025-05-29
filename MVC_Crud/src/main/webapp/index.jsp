@@ -104,7 +104,7 @@
     <h2>Registration Form</h2>
         <hr>
         <span class="text-success">${msg}</span> 
- 
+ <span class="text-danger">${err}</span> 
     <form action="reg" method="post">
 		
 
@@ -136,7 +136,8 @@
         <br>
         <input type="submit" class="btn btn-success" id="smbtn">
         <input type="reset" class="btn btn-info">
-        <a href="display">View All Users</a>
+        <a href="login.jsp">Already registered? Login here</a>
+        <a href="display">display</a>
     </form> 
 </div>
 </div>

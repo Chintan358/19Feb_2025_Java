@@ -141,4 +141,53 @@ public class UserDao {
 	}
 	
 	
+	public boolean isEmailExist(String email)
+	{
+		boolean b = false;
+		try {
+			PreparedStatement ps = 
+					cn.prepareStatement("select * from user where email=?");
+			ps.setString(1, email);
+			
+			ResultSet rs = ps.executeQuery();
+			if(rs.next())
+			{
+				b = true;
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return b;
+	}
+	
+	public User loginCheck(User u)
+	{
+		User user = null;
+		try {
+			PreparedStatement ps =
+					cn.prepareStatement("select * from user where email=? and pass=?");
+		
+			ps.setString(1, u.getEmail());
+			ps.setString(2, u.getPassword());
+			
+			ResultSet rs = ps.executeQuery();
+			if(rs.next())
+			{
+				user = new User();
+				user.setId(rs.getInt(1));
+				user.setUsername(rs.getString(2));
+				user.setEmail(rs.getString(3));
+			}
+		
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return user;
+	}
+	
 }

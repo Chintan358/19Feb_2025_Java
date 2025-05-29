@@ -13,6 +13,17 @@
 </head>
 <body>
 
+	<%
+	
+	String user =  (String)session.getAttribute("user");
+	if(user==null)
+	{
+		request.setAttribute("err", "Please login first");
+		request.getRequestDispatcher("login.jsp").forward(request, response);
+		
+	}
+	%>
+
 	<div class="container">
 	<div class="row">
 	<div class="col-8 mx-auto card p-5 mt-3">
@@ -24,7 +35,8 @@
 	<th>Id</th>
 	<th>Username</th>
 	<th>Email</th>
-	<th colspan="2">Action</th>
+	<th >Action</th>
+	<th><a href="logout" class="btn btn-primary">Logout</a> </th>
 	</tr>
 	
 			<%
@@ -45,6 +57,7 @@
 			%>	
 			</table>
 			
+			<a href="index.jsp" class="btn btn-primary">Home</a>
 			</div>
 	</div>
 	</div>
