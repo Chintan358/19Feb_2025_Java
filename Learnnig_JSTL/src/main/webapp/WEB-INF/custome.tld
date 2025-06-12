@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+        version="2.1">
+
+    <tlib-version>1.0</tlib-version>
+    <short-name>square</short-name>
+    <uri>http://example.com/square</uri>
+
+    <tag>
+        <name>square</name>
+        <tag-class>com.Square</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>number</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <name>cube</name>
+        <tag-class>com.Cube</tag-class>
+        <body-content>empty</body-content>
+        <attribute>
+            <name>number</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    
+</taglib>
