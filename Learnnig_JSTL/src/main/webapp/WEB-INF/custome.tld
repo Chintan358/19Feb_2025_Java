@@ -19,7 +19,8 @@
     
     <tag>
         <name>cube</name>
-        <tag-class>com.Cube</tag-class>
+        <tag-class>com.Cube  
+        </tag-class>
         <body-content>empty</body-content>
         <attribute>
             <name>number</name>
