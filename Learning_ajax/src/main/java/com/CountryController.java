@@ -14,51 +14,37 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/search")
-public class SearchServlet extends HttpServlet {
-	
+@WebServlet("/countries")
+public class CountryController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-	
-		
-		String value = req.getParameter("value");
 		PrintWriter pw = resp.getWriter();
-
+		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			
 			Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/19feb_java","root","root");
 			
-			PreparedStatement ps = cn.prepareStatement("select * from products where name like ?");
-			ps.setString(1, value+"%");
+			
+			PreparedStatement ps  =cn.prepareStatement("select * from country");
 			ResultSet rs = ps.executeQuery();
 			
-			String options = "<ul>";
+			String options ="";
 			while(rs.next())
 			{
-				options+="<li>"+rs.getString(2)+"</li>";
+				options+="<option>"+rs.getString(2)+"</option>";
 			}
-			options+="</ul>";
+			
 			pw.append(options);
-				
+			
 		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-			
-		
-		
-		
-	
-		
-		
-		
 		
 		
 		
 		
 	}
-
-
 }

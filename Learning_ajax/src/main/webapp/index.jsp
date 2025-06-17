@@ -14,8 +14,16 @@
 		$(document).ready(function(){
 	
 			//alert("Hello")
+			getCountries()
 		
 		})
+		
+		const getCountries = ()=>{
+
+				$.get("countries",{},function(rt){
+					country.innerHTML=rt;
+				})	
+		}
 		
 		const hello = ()=>{
 			
@@ -49,6 +57,25 @@
 		<input type="text" placeholder="Search here..." onkeyup="search(value)">
 		
 		<div id="data"></div>
+		
+		<hr>
+		
+		<select id="country">
+			<option>---Select country---</option>
+		</select>
+		
+		<select>
+			<option>---Select state---</option>
+		</select>
+		
+		<select>
+			<option>---Select city	---</option>
+		</select>
+		
+		
+		
+		
+		
 
 </body>
 </html>

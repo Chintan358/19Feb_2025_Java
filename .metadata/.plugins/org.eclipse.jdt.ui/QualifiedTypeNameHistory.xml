@@ -43,7 +43,6 @@
     <fullyQualifiedTypeName name="dao.UserDao"/>
     <fullyQualifiedTypeName name="jakarta.servlet.ServletConfig"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
     <fullyQualifiedTypeName name="com.Validation"/>
@@ -51,8 +50,6 @@
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpFilter"/>
     <fullyQualifiedTypeName name="jakarta.servlet.ServletContextListener"/>
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebListener"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
-    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="org.apache.catalina.SessionListener"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpSessionListener"/>
@@ -60,4 +57,7 @@
     <fullyQualifiedTypeName name="jakarta.servlet.jsp.tagext.TagSupport"/>
     <fullyQualifiedTypeName name="jakarta.servlet.jsp.JspWriter"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebServlet"/>
+    <fullyQualifiedTypeName name="jakarta.servlet.http.HttpServlet"/>
+    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 </qualifiedTypeNameHistroy>
