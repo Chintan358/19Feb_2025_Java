@@ -14,12 +14,14 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/countries")
-public class CountryController extends HttpServlet {
+@WebServlet("/cities")
+public class CityController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 		PrintWriter pw = resp.getWriter();
+		
+		int sid = Integer.parseInt(req.getParameter("sid"));
 		
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
@@ -27,7 +29,9 @@ public class CountryController extends HttpServlet {
 			Connection cn = DriverManager.getConnection("jdbc:mysql://localhost:3306/19feb_java","root","root");
 			
 			
-			PreparedStatement ps  =cn.prepareStatement("select * from country");
+			PreparedStatement ps  =cn.prepareStatement("select * from city where state_id=?");
+			ps.setInt(1, sid);
+			
 			ResultSet rs = ps.executeQuery();
 			
 			String options ="";

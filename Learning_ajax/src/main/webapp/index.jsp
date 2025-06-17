@@ -25,6 +25,22 @@
 				})	
 		}
 		
+		const getState = (cid)=>{
+			
+				$.get("states",{cid},function(rt){
+					state.innerHTML = rt
+				})
+		
+		}
+		
+		const getCities = (sid)=>{
+				
+				$.get("cities",{sid},function(rt){
+					city.innerHTML=rt
+				})	
+		
+		}
+		
 		const hello = ()=>{
 			
 			var uname = $("#uname").val()
@@ -60,15 +76,15 @@
 		
 		<hr>
 		
-		<select id="country">
+		<select id="country" onchange="getState(value)">
 			<option>---Select country---</option>
 		</select>
 		
-		<select>
+		<select id="state" onchange="getCities(value)">
 			<option>---Select state---</option>
 		</select>
 		
-		<select>
+		<select id="city">
 			<option>---Select city	---</option>
 		</select>
 		
