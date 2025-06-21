@@ -11,6 +11,8 @@
 	<script type="text/javascript">
 	
 	$(document).ready(function(){
+
+		$("#upbtn").hide()
 		load()
 	})
 	
@@ -28,8 +30,8 @@
 				rows+="<td>"+ele.name+"</td>"
 				rows+="<td>"+ele.email+"</td>"
 				rows+="<td>"+ele.phone+"</td>"
-				rows+="<td><button class='btn btn-primary'>Update</button></td>"
-				rows+="<td><button class='btn btn-danger'>Delete</button></td></tr>"
+				rows+="<td><button class='btn btn-primary' onclick='getStudentById("+ele.id+")'>Update</button></td>"
+				rows+="<td><button class='btn btn-danger' onclick='deleteStudent("+ele.id+")'>Delete</button></td></tr>"
 				
 			})
 			
@@ -51,7 +53,7 @@
 			
 			$("#uname").val("")
 			$("#email").val("")
-			
+
 			$("#phone").val("")
 			
 			
@@ -60,6 +62,54 @@
 	
 	}
 	
+	
+	const deleteStudent=(sid)=>
+	{
+		$.get("update",{"sid":sid,"action":"delete"},function(rt){	
+		
+			alert(rt)
+			load()
+		})
+	}
+	
+	const getStudentById = (sid)=>{
+		$.get("update",{"sid":sid,"action":"update"},function(rt){	
+			
+			const dt = JSON.parse(rt)
+			
+			$("#id").val(dt.id)
+			$("#uname").val(dt.name)
+			$("#email").val(dt.email)
+			$("#phone").val(dt.phone)
+			
+			$("#upbtn").show()
+			$("#smbtn").hide()
+		})
+	}
+	
+	
+	const updateStudent = ()=>{
+
+		var id = $("#id").val()
+		var uname = $("#uname").val()
+		var email = $("#email").val()
+		var phone = $("#phone").val()
+		
+		$.post("saveupdate",{id,uname,email,phone},function(rt){
+        
+			alert(rt)
+			load()
+			
+			$("#id").val("")
+			$("#uname").val("")
+			$("#email").val("")
+			$("#phone").val("")
+			
+			
+			$("#upbtn").hide()
+			$("#smbtn").show()
+		})	
+	}
 	
 	</script>
 
@@ -72,14 +122,15 @@
 			<div class="col-4 card p-3">
 			<h2 align="center">User Registration</h2>
 			<hr>
-					
-					<input type="text" name="uname" id="uname" placeholder="Enter username" class="form-control">
+			<input type="hidden" id="id">
+				<input type="text" name="uname" id="uname" placeholder="Enter username" class="form-control">
 					<br>
-					<input type="text" name="email" id="email" placeholder="Enter username" class="form-control">
+					<input type="text" name="email" id="email" placeholder="Enter email" class="form-control">
 					<br>
-					<input type="text" name="phone" id="phone" placeholder="Enter username" class="form-control">
+					<input type="text" name="phone" id="phone" placeholder="Enter phone" class="form-control">
 						<br>
-					<button class="btn btn-success" onclick="addStudent()">Register</button>
+					<button class="btn btn-success" id="smbtn" onclick="addStudent()">Register</button>
+					<button class="btn btn-success" id="upbtn" onclick="updateStudent()">Update</button>
 			
 			</div>
 			<div class="col-1">
