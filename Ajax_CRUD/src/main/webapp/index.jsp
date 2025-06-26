@@ -111,6 +111,51 @@
 		})	
 	}
 	
+	const checkusername = (uname)=>{
+	
+		$.get('validation',{uname},function(rt){
+			
+			if(rt)
+			{
+				$("#unameErr").html(rt)
+				$("#uname").css("border","1px solid red")
+				$("#smbtn").attr('disabled','disabled');
+				
+			}
+			else
+			{
+				$("#unameErr").html("")
+				$("#uname").css("border","")
+				$("#smbtn").attr('disabled',false);
+			}
+		})	
+		
+	}
+	
+	const search = (uname)=>{
+		
+		$.get("search",{uname},function(rt){
+			
+			const allData =  JSON.parse(rt)
+			
+		 	var rows = "";
+			allData.map(ele=>{
+				
+				rows+="<tr><td>"+ele.id+"</td>"
+				rows+="<td>"+ele.name+"</td>"
+				rows+="<td>"+ele.email+"</td>"
+				rows+="<td>"+ele.phone+"</td>"
+				rows+="<td><button class='btn btn-primary' onclick='getStudentById("+ele.id+")'>Update</button></td>"
+				rows+="<td><button class='btn btn-danger' onclick='deleteStudent("+ele.id+")'>Delete</button></td></tr>"
+				
+			})
+			
+			$("#tdata").html(rows)
+		
+		})	
+		
+	}
+	
 	</script>
 
 </head>
@@ -123,7 +168,8 @@
 			<h2 align="center">User Registration</h2>
 			<hr>
 			<input type="hidden" id="id">
-				<input type="text" name="uname" id="uname" placeholder="Enter username" class="form-control">
+				<input type="text" name="uname" id="uname" placeholder="Enter username" class="form-control" onblur="checkusername(value)">
+					<span id="unameErr" class="text-danger"></span>
 					<br>
 					<input type="text" name="email" id="email" placeholder="Enter email" class="form-control">
 					<br>
@@ -140,6 +186,8 @@
 			<h2 align="center">User Details</h2>
 			<hr>
 			
+			<input type="text" class="form-control" placeholder="search..." onkeyup="search(value)" >
+			<br>
 			<table class="table table-striped">
 			<thead>
 			<tr>
@@ -149,6 +197,7 @@
 			<th>Phone</th>
 			</tr>
 			</thead>
+			
 			<tbody id="tdata">
 			
 			</tbody>

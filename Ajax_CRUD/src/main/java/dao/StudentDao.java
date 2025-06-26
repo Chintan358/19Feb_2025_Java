@@ -137,6 +137,58 @@ public class StudentDao {
 		return i;
 	}
 
+
+	public boolean isUsernameExist(String uname) {
+		
+		boolean b = false;
+		try {
+			PreparedStatement ps = 
+					cn.prepareStatement("select * from student where name=?");
+			ps.setString(1, uname);
+			ResultSet rs = ps.executeQuery();
+			if(rs.next())
+			{
+				b = true;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return b;
+	}
+
+
+	public ArrayList<Student> searchStudent(String uname) {
+		ArrayList<Student> al = new ArrayList();
+		
+		try {
+			PreparedStatement ps = cn.prepareStatement("select * from student where name like ?");
+			ps.setString(1, "%"+uname+"%");
+			ResultSet rs = ps.executeQuery();
+			while(rs.next())
+			{
+				
+				
+				Student st  =new Student();
+				st.setId(rs.getInt(1));
+				st.setName(rs.getString(2));
+				st.setEmail(rs.getString(3));
+				st.setPhone(rs.getString(4));
+				
+				al.add(st);
+			}
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return al;
+	}
+
 	
 	
 	
