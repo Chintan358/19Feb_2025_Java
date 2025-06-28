@@ -127,7 +127,7 @@
 				$("#unameErr").html("")
 				$("#uname").css("border","")
 				$("#smbtn").attr('disabled',false);
-			}
+			}         
 		})	
 		
 	}
