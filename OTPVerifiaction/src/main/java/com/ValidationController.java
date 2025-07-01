@@ -3,6 +3,7 @@ package com;
 import java.io.IOException;
 import java.util.Random;
 
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -21,5 +22,10 @@ public class ValidationController extends HttpServlet {
 		int otp = r.nextInt(100,999);
 		
 		EmailSend.sendmail(email, "Otp verification", "Your otp is"+otp);
+		
+		ServletContext cx = req.getServletContext();
+		cx.setAttribute("otp", otp+"");
+		
+		req.getRequestDispatcher("otp.jsp").forward(req, resp);
 	}
 }
