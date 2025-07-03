@@ -26,11 +26,11 @@ public class UploadServlet extends HttpServlet {
 		String name = req.getParameter("name");
 		Part img = req.getPart("img");
 		
-		String imgname = Paths.get(img.getSubmittedFileName()).toString();
+		String imgname = System.currentTimeMillis()+"_"+Paths.get(img.getSubmittedFileName()).toString();
 		
 		String path = req.getServletContext().getRealPath("/");
 		String mypath = path+File.separator+"img";
-	
+		System.out.println(mypath);
 		File file = new File(mypath);
 		
 		if(!file.exists())
