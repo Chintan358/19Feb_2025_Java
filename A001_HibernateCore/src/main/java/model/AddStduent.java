@@ -1,7 +1,7 @@
 package model;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
+import org.hibernate.SessionFactory;  
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
@@ -10,18 +10,25 @@ public class AddStduent {
 		
 		
 		Student st  =new Student();
-		st.setId(1);
-		st.setName("Monil-u");
-		st.setEmail("monil@yahoo.com");
+		st.setId(3);
+		st.setName("Ronak Poddar");
+		st.setEmail("ronak@gmail.com");
 		
 		
 		
-		Configuration cfg  =new Configuration();
-		cfg.configure("hibernate.cfg.xml");
-		cfg.addAnnotatedClass(Student.class);
+//		Configuration cfg  =new Configuration();
+//		cfg.configure("hibernate.cfg.xml");
+//		cfg.addAnnotatedClass(Student.class);
+//		
+//		
+//		SessionFactory sf = cfg.buildSessionFactory();
 		
+		SessionFactory sf = new Configuration()
+				.configure("hibernate.cfg.xml")
+				.addAnnotatedClass(Student.class)
+				.buildSessionFactory();
+				
 		
-		SessionFactory sf = cfg.buildSessionFactory();
 		Session s  =sf.openSession();
 		Transaction tx  =s.beginTransaction();
 		

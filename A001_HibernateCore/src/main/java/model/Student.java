@@ -6,6 +6,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
+
 @Table(name="student")
 public class Student {
 		
@@ -18,6 +19,17 @@ public class Student {
 	
 	@Column(name="student_email")
 	String email;
+	
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public Student(int id, String name, String email) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+	}
 
 	public int getId() {
 		return id;
