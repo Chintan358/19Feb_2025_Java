@@ -33,7 +33,9 @@ public class UserDao {
 				e.printStackTrace();
 			}
 			
-			return i;		
+
+				return i;
+			  
 		}
 		
 		public List<User> ViewUsers()
