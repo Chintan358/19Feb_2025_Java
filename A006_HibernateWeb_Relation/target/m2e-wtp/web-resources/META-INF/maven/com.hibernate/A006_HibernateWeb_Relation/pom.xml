@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.hibernate</groupId>
+  <artifactId>A006_HibernateWeb_Relation</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>A006_HibernateWeb_Relation Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    
+        <dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core-jakarta</artifactId>
+			<version>5.6.1.Final</version> <!-- Use the latest stable version
+			compatible with Jakarta EE -->
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version>
+		</dependency>
+  
+  </dependencies>
+  <build>
+    <finalName>A006_HibernateWeb_Relation</finalName>
+  </build>
+</project>

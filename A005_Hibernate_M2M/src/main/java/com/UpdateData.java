@@ -27,6 +27,7 @@ public class UpdateData {
 			Faculty f  = session.load(Faculty.class, 2);
 			
 			Course c = session.load(Course.class, 1);
+			
 			f.addCounrse(c);
 			
 			session.saveOrUpdate(f);
