@@ -21,7 +21,7 @@ public class Faculty {
 	@ManyToMany(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
 	@JoinTable(
 			name = "faculty_course",
-			joinColumns = @JoinColumn(name="fid"),
+			joinColumns = @JoinColumn(  name="fid"),
 			inverseJoinColumns = @JoinColumn(name="cid")		
 			)
 	List<Course> courses;

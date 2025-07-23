@@ -24,33 +24,33 @@ public class AddData {
 			Session session = sf.openSession();
 			Transaction tx = session.beginTransaction();
 			
-//			Faculty f = new Faculty();
-//			f.setName("Monil");
+			Faculty f = new Faculty();
+			f.setName("Sitesh");
+			
+			
+			Course c1 = new Course();
+			c1.setName("Java");
+			
+			
+			
+			Course c2  =new Course();
+			c2.setName("Python");
+			
+			f.addCounrse(c1);
+			f.addCounrse(c2);
+			
+			
+			
+			
+//			Course c  =session.load(Course.class, 1);
 //			
-//			
-//			Course c1 = new Course();
-//			c1.setName("Php");
-//			
-//			
-//			
-//			Course c2  =new Course();
-//			c2.setName("Android");
-//			
-//			f.addCounrse(c1);
-//			f.addCounrse(c2);
+//			Faculty f1 = new Faculty();
+//			f1.setName("Shivshankar");
+//			f1.addCounrse(c);
 			
-			
-			
-			
-			Course c  =session.load(Course.class, 1);
-			
-			Faculty f1 = new Faculty();
-			f1.setName("Shivshankar");
-			f1.addCounrse(c);
-			
-			session.save(f1);
-			
-			
+		session.save(f);
+		session.save(c1);
+		session.save(c2);
 			
 			tx.commit();
 			
