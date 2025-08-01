@@ -1,3 +1,4 @@
+<%@page import="model.Product"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="model.Category"%>
 <%@page import="java.util.List"%>
@@ -14,7 +15,7 @@
 
 		<div class="container">
 		<div class="row">
-			<div class="col-5 mx-auto card p-5 mt-3" >
+			<div class="col-5 card p-5 mt-3" >
 			<h2>Product Registration</h2>
 			<hr>
 			
@@ -73,6 +74,47 @@
 			
 			</form>
 			
+			</div>
+			<div class="col-1"></div>
+			<div class="col-6 card p-5 mt-3" >
+			<h2>Product details</h2>
+			<hr>
+			<table class="table">
+			<tr>
+			<th>Id</th>
+			<th>Category</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Qty</th>
+			<th>Gender</th>
+			<th>size</th>
+			</tr>
+			
+			<%
+				ArrayList<Product> prods = (ArrayList)request.getAttribute("products");
+				for(Product p  :prods)
+				{ %>
+					<tr>
+					<td><%=p.getId() %></td>
+					<td><%=p.getCategory().getName() %></td>
+					<td><%=p.getName() %></td>
+					<td><%=p.getPrice() %></td>
+					<td><%=p.getQty() %></td>
+					<td><%=p.getGender() %></td>
+					<td><%
+						
+						String str[] = p.getSize().split(",");
+						for(String s  :str){ %>
+							<span><%=s%></span>
+						<%}
+					
+					%></td>
+					</tr>
+				<%}
+			%>
+			
+			
+			</table>
 			</div>
 		</div>
 		</div>

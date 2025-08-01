@@ -29,4 +29,37 @@ public class ProductDao {
 		return s.createQuery("from Category").list();
 	}
 	
+	public Category catById(int id)
+	{
+		Session s = sf.openSession();
+		Transaction tx  =s.beginTransaction();
+		return s.get(Category.class, id);
+	}
+
+
+	public int addProduct(Product p) {
+		
+		int i=0;
+		try {
+			Session s = sf.openSession();
+			Transaction tx  =s.beginTransaction();
+			s.saveOrUpdate(p);
+			tx.commit();
+			i=1;
+			
+			
+		} catch (Exception e) {
+			i=0;
+		}
+		return i;
+	}
+
+
+	public List<Product> allProducts() {
+		
+		Session s = sf.openSession();
+		Transaction tx  =s.beginTransaction();
+		return s.createQuery("from Product").list() ;
+	}
+	
 }
