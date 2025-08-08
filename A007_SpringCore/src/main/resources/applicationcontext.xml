@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+          http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd">
+          
+          
+          <bean name="std" class="org.Student" autowire="byType">
+          <property name="id" value="10"></property>
+          <property name="name" value="Ronak"></property>
+          <property name="email" value="ronak@gmail.com"></property>
+          <property name="subjects">
+          <list>
+          <value>Java</value>
+          <value>Python</value>
+          <value>Php</value>
+          </list>
+          </property>
+          <property name="lang">
+          <set>
+          <value>English</value>
+          <value>Gujarati</value>
+          <value>Hindi</value>
+          </set>
+          </property>
+        <!--   <property name="adr" ref="adr"></property> -->
+          <!-- <property name="info">
+          <list>
+          <ref bean="info1"/>
+           <ref bean="info2"/>
+          </list>
+          </property> -->
+          </bean>
+          
+          
+          <bean name="adr" class="org.Address">
+          <property name="country" value="india"></property>
+          <property name="state" value="gujarat"></property>
+          <property name="city" value="surat"></property>
+          </bean>
+          
+          <bean name="info1" class="org.Info">
+          <property name="phone" value="7485859665"></property>
+          </bean>
+          
+          <bean name="info2" class="org.Info">
+          <property name="phone" value="4484848484"></property>
+          </bean>
+          
+          
+ </beans>

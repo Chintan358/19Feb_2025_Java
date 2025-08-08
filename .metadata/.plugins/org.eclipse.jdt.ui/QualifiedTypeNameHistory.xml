@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
-    <fullyQualifiedTypeName name="java.util.Properties"/>
-    <fullyQualifiedTypeName name="jakarta.mail.Session"/>
-    <fullyQualifiedTypeName name="jakarta.mail.Authenticator"/>
-    <fullyQualifiedTypeName name="jakarta.mail.PasswordAuthentication"/>
-    <fullyQualifiedTypeName name="jakarta.mail.Message"/>
-    <fullyQualifiedTypeName name="jakarta.mail.internet.InternetAddress"/>
-    <fullyQualifiedTypeName name="jakarta.mail.internet.MimeMessage"/>
-    <fullyQualifiedTypeName name="jakarta.mail.Transport"/>
-    <fullyQualifiedTypeName name="jakarta.mail.MessagingException"/>
-    <fullyQualifiedTypeName name="java.io.PrintWriter"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="com.EmailSend"/>
     <fullyQualifiedTypeName name="jakarta.servlet.ServletContext"/>
@@ -60,4 +49,15 @@
     <fullyQualifiedTypeName name="Demo"/>
     <fullyQualifiedTypeName name="Vehiclae"/>
     <fullyQualifiedTypeName name="vehicle"/>
+    <fullyQualifiedTypeName name="bank.SavingAccount"/>
+    <fullyQualifiedTypeName name="bank.LoanAccount"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+    <fullyQualifiedTypeName name="bank.AppConfig"/>
+    <fullyQualifiedTypeName name="bank.Account"/>
+    <fullyQualifiedTypeName name="bank.RetailUser"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="bank.User"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
 </qualifiedTypeNameHistroy>
