@@ -29,7 +29,7 @@ public class UserDaoImpl implements UserDao {
 	@Override
 	public List<User> allUsers() {
 		
-		Session s = factory.openSession();
+		Session s = factory.openSession();  
 		Transaction tx  =s.beginTransaction();
 		return s.createQuery("from User").list();
 	}
