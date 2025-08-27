@@ -15,9 +15,11 @@
 			<form:hidden path="id"/>
 		<form:label path="name">Name</form:label>
 		<form:input path="name"/>
+		<form:errors path="name"></form:errors>
 		
 		<form:label path="email">Email</form:label>
 		<form:input path="email"/>
+		<form:errors path="email"></form:errors>
 		
 		<form:label path="phone">Phone</form:label>
 		<form:input path="phone"/>
