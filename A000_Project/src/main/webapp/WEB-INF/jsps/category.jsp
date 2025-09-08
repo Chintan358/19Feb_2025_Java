@@ -308,22 +308,23 @@
               <div class="col-lg-6">
                 <!-- input style start -->
                 <div class="card-style mb-30">
-                  <h6 class="mb-25">Input Fields</h6>
+                 <form action="addcategory" method="post" enctype="multipart/form-data">
                   <div class="input-style-1">
-                    <label>Full Name</label>
-                    <input type="text" placeholder="Full Name">
+                    <label>Category Name</label>
+                    <input type="text" placeholder="Category Name" name="catname">
                   </div>
-                  <!-- end input -->
-                  <div class="input-style-2">
-                    <input type="text" placeholder="Full Name">
-                    <span class="icon"> <i class="lni lni-user"></i> </span>
+                  
+                  <div class="input-style-1">
+                    <label>Category Image</label>
+                    <input type="file" name="file">
                   </div>
-                  <!-- end input -->
-                  <div class="input-style-3">
-                    <input type="text" placeholder="Full Name">
-                    <span class="icon"><i class="lni lni-user"></i></span>
+                  
+                   <div class="input-style-1">
+                   <input type="submit">
                   </div>
-                  <!-- end input -->
+               		</form>
+               		
+                  
                 </div>
             
               </div>
