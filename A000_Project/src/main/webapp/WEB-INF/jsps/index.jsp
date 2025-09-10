@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -50,71 +51,17 @@
         <h3 class="section__title"><span>Popular</span> Categories</h3>
         <div class="categories__container swiper">
           <div class="swiper-wrapper">
+          <c:forEach var="dt" items="${categories}">
             <a href="shop.html" class="category__item swiper-slide">
               <img
-                src="assets/img/category-1.jpg"
+                src="../category_img/${dt.getImage()}"
                 alt=""
                 class="category__img"
               />
-              <h3 class="category__title">T-Shirt</h3>
+              <h3 class="category__title">${dt.getName()}</h3>
             </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-2.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Bags</h3>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-3.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Sandal</h3>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-4.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Scarf Cap</h3>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-5.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Shoes</h3>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-6.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Pillowcase</h3>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-7.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Jumpsuit</h3>
-            </a>
-            <a href="shop.html" class="category__item swiper-slide">
-              <img
-                src="assets/img/category-8.jpg"
-                alt=""
-                class="category__img"
-              />
-              <h3 class="category__title">Hats</h3>
-            </a>
-          </div>
+       </c:forEach>
+       </div>
 
           <div class="swiper-button-prev">
             <i class="fi fi-rs-angle-left"></i>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -339,17 +340,15 @@
                       <thead>
                         <tr>
                           <th class="lead-info">
-                            <h6>Lead</h6>
+                            <h6>Id</h6>
                           </th>
                           <th class="lead-email">
-                            <h6>Email</h6>
+                            <h6>Name</h6>
                           </th>
                           <th class="lead-phone">
-                            <h6>Phone No</h6>
+                            <h6>Image</h6>
                           </th>
-                          <th class="lead-company">
-                            <h6>Company</h6>
-                          </th>
+                          
                           <th>
                             <h6>Action</h6>
                           </th>
@@ -357,26 +356,27 @@
                         <!-- end table row-->
                       </thead>
                       <tbody>
+                      
+                      <c:forEach var="dt" items="${categories}">
                         <tr>
+                        <td class="min-width">
+                            <p>${dt.getId()}</p>
+                          </td>
+                          
+                          <td class="min-width">
+                            <p>${dt.getName()}</p>
+                          </td>
                           <td class="min-width">
                             <div class="lead">
                               <div class="lead-image">
-                                <img src="assets/images/lead/lead-1.png" alt="">
+                            
+                                <img src="../category_img/${dt.getImage()}" alt="${dt.getImage()}">
                               </div>
-                              <div class="lead-text">
-                                <p>Courtney Henry</p>
-                              </div>
+                              
                             </div>
                           </td>
-                          <td class="min-width">
-                            <p><a href="#0">yourmail@gmail.com</a></p>
-                          </td>
-                          <td class="min-width">
-                            <p>(303)555 3343523</p>
-                          </td>
-                          <td class="min-width">
-                            <p>UIdeck digital agency</p>
-                          </td>
+                          
+                         
                           <td>
                             <div class="action">
                               <button class="text-danger">
@@ -385,152 +385,10 @@
                             </div>
                           </td>
                         </tr>
+                        
+                        </c:forEach>
                         <!-- end table row -->
-                        <tr>
-                          <td class="min-width">
-                            <div class="lead">
-                              <div class="lead-image">
-                                <img src="assets/images/lead/lead-2.png" alt="">
-                              </div>
-                              <div class="lead-text">
-                                <p>John Doe</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td class="min-width">
-                            <p><a href="#0">yourmail@gmail.com</a></p>
-                          </td>
-                          <td class="min-width">
-                            <p>(303)555 3343523</p>
-                          </td>
-                          <td class="min-width">
-                            <p>Graygrids digital agency</p>
-                          </td>
-                          <td>
-                            <div class="action">
-                              <button class="text-danger">
-                                <i class="lni lni-trash-can"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <!-- end table row -->
-                        <tr>
-                          <td class="min-width">
-                            <div class="lead">
-                              <div class="lead-image">
-                                <img src="assets/images/lead/lead-3.png" alt="">
-                              </div>
-                              <div class="lead-text">
-                                <p>David Smith</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td class="min-width">
-                            <p><a href="#0">yourmail@gmail.com</a></p>
-                          </td>
-                          <td class="min-width">
-                            <p>(303)555 3343523</p>
-                          </td>
-                          <td class="min-width">
-                            <p>Abc agency</p>
-                          </td>
-                          <td>
-                            <div class="action">
-                              <button class="text-danger">
-                                <i class="lni lni-trash-can"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <!-- end table row -->
-                        <tr>
-                          <td class="min-width">
-                            <div class="lead">
-                              <div class="lead-image">
-                                <img src="assets/images/lead/lead-4.png" alt="">
-                              </div>
-                              <div class="lead-text">
-                                <p>Jonathon</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td class="min-width">
-                            <p><a href="#0">yourmail@gmail.com</a></p>
-                          </td>
-                          <td class="min-width">
-                            <p>(303)555 3343523</p>
-                          </td>
-                          <td class="min-width">
-                            <p>Creative IT Agency</p>
-                          </td>
-                          <td>
-                            <div class="action">
-                              <button class="text-danger">
-                                <i class="lni lni-trash-can"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <!-- end table row -->
-                        <tr>
-                          <td>
-                            <div class="lead">
-                              <div class="lead-image">
-                                <img src="assets/images/lead/lead-5.png" alt="">
-                              </div>
-                              <div class="lead-text">
-                                <p>Anna Lee</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <p><a href="#0">yourmail@gmail.com</a></p>
-                          </td>
-                          <td>
-                            <p>(303)555 3343523</p>
-                          </td>
-                          <td>
-                            <p>Halal It agency</p>
-                          </td>
-                          <td>
-                            <div class="action">
-                              <button class="text-danger">
-                                <i class="lni lni-trash-can"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <!-- end table row -->
-                        <tr>
-                          <td>
-                            <div class="lead">
-                              <div class="lead-image">
-                                <img src="assets/images/lead/lead-6.png" alt="">
-                              </div>
-                              <div class="lead-text">
-                                <p>Gray Simon</p>
-                              </div>
-                            </div>
-                          </td>
-                          <td>
-                            <p><a href="#0">yourmail@gmail.com</a></p>
-                          </td>
-                          <td>
-                            <p>(303)555 3343523</p>
-                          </td>
-                          <td>
-                            <p>DesignCourse</p>
-                          </td>
-                          <td>
-                            <div class="action">
-                              <button class="text-danger">
-                                <i class="lni lni-trash-can"></i>
-                              </button>
-                            </div>
-                          </td>
-                        </tr>
-                        <!-- end table row -->
+                    
                       </tbody>
                     </table>
                     <!-- end table -->
