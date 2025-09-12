@@ -15,7 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.example.demo.model.Category;
+import com.example.demo.model.Product;
 import com.example.demo.service.CategoryService;
+import com.example.demo.service.ProductService;
 
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -24,6 +26,9 @@ public class AdminController {
 	
 	@Autowired
 	CategoryService categoryService;
+	
+	@Autowired
+	ProductService productService;
 		
 	@GetMapping("/admin")
 	public String admin()
@@ -99,6 +104,46 @@ public class AdminController {
 	public String products(Model model)
 	{
 		model.addAttribute("categories",categoryService.allCategories());
+		model.addAttribute("products",productService.viewAllProducts());
 		return "products";
+	}
+	
+	
+	@PostMapping("/addproduct")
+	public String addproducts(@RequestParam("file") MultipartFile file,HttpServletRequest req)
+	{
+		String fileName = System.currentTimeMillis()+"_"+file.getOriginalFilename();
+		
+		String path = req.getServletContext().getRealPath("/");
+		String mypath = path+File.separator+"product_img";
+		File createfile = new File(mypath);
+		if(!createfile.exists())
+		{
+			createfile.mkdir();
+		}
+		
+		
+		File savedFile = new File(createfile, fileName);
+	    try {
+			file.transferTo(savedFile);
+		} catch (IllegalStateException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    
+	   Product p = new Product();
+	   p.setCategory(categoryService.categoryById(Integer.parseInt(req.getParameter("catid"))));
+	   p.setName(req.getParameter("name"));
+	   p.setPrice(Double.parseDouble(req.getParameter("price")));
+	   p.setDescription(req.getParameter("desc"));
+	   p.setStock(Integer.parseInt(req.getParameter("stock")));
+	   p.setImage(fileName);
+		
+	   productService.addorUpdateProduct(p);
+		
+		return "redirect:products";
 	}
 }

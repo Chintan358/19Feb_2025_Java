@@ -19,11 +19,7 @@
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
-    <!-- ======== Preloader =========== -->
-    <div id="preloader">
-      <div class="spinner"></div>
-    </div>
-    <!-- ======== Preloader =========== -->
+   
 
     <!-- ======== sidebar-nav start =========== -->
     <aside class="sidebar-nav-wrapper">
@@ -314,7 +310,7 @@
                  <form action="addproduct" method="post" enctype="multipart/form-data">
                   <div class="input-style-1">
                     <label>Category Name</label>
-                    <select class="form-control">
+                    <select class="form-control" name="catid">
                     <option>---select Category---</option>
                     <c:forEach var="dt" items="${categories}">
                     <option value="${dt.getId()}">${dt.getName()}</option>
@@ -334,7 +330,7 @@
                   
                    <div class="input-style-1">
                     <label>Description</label>
-                    <textarea  name="desc">
+                    <textarea  name="desc"></textarea>
                   </div>
                   
                    <div class="input-style-1">
@@ -369,10 +365,19 @@
                           <th class="lead-info">
                             <h6>Id</h6>
                           </th>
-                          <th class="lead-email">
+                          <th class="lead-info">
                             <h6>Name</h6>
                           </th>
-                          <th class="lead-phone">
+                          <th class="lead-info">
+                            <h6>Price</h6>
+                          </th>
+                          <th class="lead-info">
+                            <h6>Stock</h6>
+                          </th>
+                          <th class="lead-info">
+                            <h6>Desc</h6>
+                          </th>
+                          <th class="lead-info">
                             <h6>Image</h6>
                           </th>
                           
@@ -384,20 +389,33 @@
                       </thead>
                       <tbody>
                       
-                      <c:forEach var="dt" items="${categories}">
+                      <c:forEach var="dt" items="${products}">
                         <tr>
-                        <td class="min-width">
+                       	 <td class="min-width">
                             <p>${dt.getId()}</p>
                           </td>
                           
                           <td class="min-width">
                             <p>${dt.getName()}</p>
                           </td>
+                          
+                           <td class="min-width">
+                            <p>${dt.getPrice()}</p>
+                          </td>
+                          
+                           <td class="min-width">
+                            <p>${dt.getStock()}</p>
+                          </td>
+                          
+                           <td class="min-width">
+                            <p>${dt.getDescription()}</p>
+                          </td>
+                          
                           <td class="min-width">
                             <div class="lead">
                               <div class="lead-image">
                             
-                                <img src="../category_img/${dt.getImage()}" alt="${dt.getImage()}">
+                                <img src="../product_img/${dt.getImage()}" alt="${dt.getImage()}">
                               </div>
                               
                             </div>

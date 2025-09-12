@@ -6,7 +6,7 @@
     <typeInfo handle="=A000_Project/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{AddressService.java[AddressService" modifiers="513" timestamp="1757312631483"/>
     <typeInfo handle="=A000_Project/C:\/Program Files\/Java\/jdk-21\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/21\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.lang.foreign(AddressLayout.class[AddressLayout" modifiers="268436993" timestamp="1753099223124"/>
     <typeInfo handle="=A000_Project/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.repo{CategoryRepo.java[CategoryRepo" modifiers="513" timestamp="1757312427378"/>
-    <typeInfo handle="=A000_Project/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{CategoryService.java[CategoryService" modifiers="513" timestamp="1757312621298"/>
+    <typeInfo handle="=A000_Project/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{CategoryService.java[CategoryService" modifiers="513" timestamp="1757484737886"/>
     <typeInfo handle="=A000_Project/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{ProductService.java[ProductService" modifiers="513" timestamp="1757312645584"/>
     <typeInfo handle="=A000_Project/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{CartService.java[CartService" modifiers="513" timestamp="1757312652178"/>
     <typeInfo handle="=A000_Project/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{OrderService.java[OrderService" modifiers="513" timestamp="1757312658780"/>
