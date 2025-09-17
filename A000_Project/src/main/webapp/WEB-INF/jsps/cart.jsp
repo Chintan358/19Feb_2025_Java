@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -42,6 +43,8 @@
       <!--=============== CART ===============-->
       <section class="cart section--lg container">
         <div class="table__container">
+        <c:set var="grandTotal" value="0" />
+        
           <table class="table">
             <thead>
               <tr>
@@ -54,74 +57,32 @@
               </tr>
             </thead>
             <tbody>
+            <c:forEach var="dt" items="${carts}">
+            <c:set var="lineTotal" value="${dt.getProduct().getPrice() * dt.getQty()}" />
+  			<c:set var="grandTotal" value="${grandTotal + lineTotal}" />
               <tr>
                 <td>
                   <img
-                    src="./assets//img/product-1-2.jpg"
+                    src="product_img/${dt.getProduct().getImage()}"
                     alt=""
                     class="table__img"
                   />
                 </td>
                 <td>
                   <h3 class="table__title">
-                    J.Crew Mercantile Women's Short-Sleeve
+                    ${dt.getProduct().getName() }
                   </h3>
-                  <p class="table__description">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
+                 
                 </td>
                 <td>
-                  <span class="table__price">$110</span>
+                  <span class="table__price">Rs. ${dt.getProduct().getPrice()}</span>
                 </td>
-                <td><input type="number" value="3" class="quantity" /></td>
-                <td><span class="subtotal">$220</span></td>
+                <td><input type="number" value="${dt.getQty() }" class="quantity" /></td>
+                <td><span class="subtotal">Rs. ${lineTotal}</span></td>
                 <td><i class="fi fi-rs-trash table__trash"></i></td>
               </tr>
-              <tr>
-                <td>
-                  <img
-                    src="./assets//img/product-7-1.jpg"
-                    alt=""
-                    class="table__img"
-                  />
-                </td>
-                <td>
-                  <h3 class="table__title">Amazon Essentials Women's Tank</h3>
-                  <p class="table__description">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                </td>
-                <td>
-                  <span class="table__price">$110</span>
-                </td>
-                <td><input type="number" value="3" class="quantity" /></td>
-                <td><span class="subtotal">$220</span></td>
-                <td><i class="fi fi-rs-trash table__trash"></i></td>
-              </tr>
-              <tr>
-                <td>
-                  <img
-                    src="./assets//img/product-2-1.jpg"
-                    alt=""
-                    class="table__img"
-                  />
-                </td>
-                <td>
-                  <h3 class="table__title">
-                    Amazon Brand - Daily Ritual Women's Jersey
-                  </h3>
-                  <p class="table__description">
-                    Lorem ipsum dolor sit amet consectetur.
-                  </p>
-                </td>
-                <td>
-                  <span class="table__price">$110</span>
-                </td>
-                <td><input type="number" value="3" class="quantity" /></td>
-                <td><span class="subtotal">$220</span></td>
-                <td><i class="fi fi-rs-trash table__trash"></i></td>
-              </tr>
-            </tbody>
+              </c:forEach>
+              </tbody>
           </table>
         </div>
 
@@ -187,15 +148,15 @@
             <table class="cart__total-table">
                 <tr>
                   <td><span class="cart__total-title">Cart Subtotal</span></td>
-                  <td><span class="cart__total-price">$240.00</span></td>
+                  <td><span class="cart__total-price">Rs. ${grandTotal }</span></td>
                 </tr>
                 <tr>
                   <td><span class="cart__total-title">Shipping</span></td>
-                  <td><span class="cart__total-price">$10.00</span></td>
+                  <td><span class="cart__total-price">$0.00</span></td>
                 </tr>
                 <tr>
                   <td><span class="cart__total-title">Total</span></td>
-                  <td><span class="cart__total-price">$250.00</span></td>
+                  <td><span class="cart__total-price">Rs. ${grandTotal }</span></td>
                 </tr>
             </table>
             <a href="checkout.html" class="btn flex btn--md">

@@ -26,22 +26,23 @@
     
   <<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   
-<!--   	<script type="text/javascript">
+ 	<script type="text/javascript">
   		
   			$(document).ready(function(){
   				
-  				laodProducts()
+  				
   			})
   			
-  			const laodProducts = () =>{
+  			
+  			const addtocart = (id)=>{
   				
-  				$.get("getproducts",{},function(rt){
+  				$.get("addtocart",{id},function(rt){
   					alert(rt)
   				})
-  				
   			}
+  			
   	
-  	</script> -->
+  	</script> 
   
   </head>
   <body>
@@ -153,9 +154,10 @@
                 
                   </div>
                   <a
-                    href="#"
+                   
                     class="action__btn cart__btn"
                     aria-label="Add To Cart"
+                    onclick="addtocart(${dt.getId()})"
                   >
                     <i class="fi fi-rs-shopping-bag-add"></i>
                   </a>

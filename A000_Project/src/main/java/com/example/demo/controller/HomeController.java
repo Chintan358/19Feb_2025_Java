@@ -8,11 +8,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.model.Cart;
 import com.example.demo.model.Product;
+import com.example.demo.model.User;
+import com.example.demo.service.CartService;
 import com.example.demo.service.CategoryService;
 import com.example.demo.service.ProductService;
+import com.example.demo.service.UserService;
 import com.example.demo.serviceimpl.OrderDetailsServiceImpl;
 import com.google.gson.Gson;
 
@@ -21,17 +27,20 @@ import jakarta.servlet.http.HttpServletResponse;
 @Controller
 public class HomeController {
 
-    private final OrderDetailsServiceImpl orderDetailsServiceImpl;
+    
 	
 	@Autowired
 	CategoryService categoryService;
 	
 	@Autowired
 	ProductService productService;
+	
+	@Autowired
+	UserService userService;
 
-    HomeController(OrderDetailsServiceImpl orderDetailsServiceImpl) {
-        this.orderDetailsServiceImpl = orderDetailsServiceImpl;
-    }
+	@Autowired
+	CartService cartService;
+    
 	
 //	@GetMapping("/getproducts")
 //	public void loadProducts(HttpServletResponse resp) throws IOException
@@ -67,11 +76,44 @@ public class HomeController {
 		return "accounts";
 	}
 	
+	
+	//********************cart*******************
 	@GetMapping("cart")
-	public String cart()
+	public String cart(Model model)
 	{
+		model.addAttribute("carts",cartService.cartByUser(userService.userById(1)));
 		return "cart";
 	}
+	
+	@GetMapping("/addtocart")
+	public void addtocart(@RequestParam("id") int pid,HttpServletResponse resp) throws IOException
+	{
+		PrintWriter pw  =resp.getWriter();
+		
+		Product p = productService.productById(pid);
+		User u = userService.userById(1);
+		
+		Cart cart = new Cart();
+		cart.setProduct(p);
+		cart.setUser(u);
+		cart.setQty(1);
+		
+		Cart ct =  cartService.existByUserAndProduct(u, p);
+		if(ct!=null)
+		{
+			ct.setQty(ct.getQty()+1);
+			cartService.addorUpdateCart(ct);
+		}
+		else
+		{
+			cartService.addorUpdateCart(cart);
+		}
+		
+		
+		pw.append("Product addded into cart !!!!");
+	}
+	
+	//********cart end****************
 	
 	@GetMapping("checkout")
 	public String checkout()
@@ -91,11 +133,25 @@ public class HomeController {
 		return "details";
 	}
 	
+	//*********************user******************
+	
 	@GetMapping("loginregister")
-	public String loginregister()
+	public String loginregister(Model model)
 	{
+		model.addAttribute("user",new User());
 		return "login-register";
 	}
+	
+	@PostMapping("/adduser")
+	public String adduser(@ModelAttribute("user") User u,Model model)
+	{
+		userService.addorUpdateUser(u);
+		model.addAttribute("msg","Registration success !!!");
+		model.addAttribute("user",new User());
+		return "login-register";
+	}
+	
+	//****************user end*************
 	
 	@GetMapping("shop")
 	public String shop()

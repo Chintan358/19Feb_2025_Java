@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+ <%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>   
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -60,31 +61,20 @@
           </div>
           <div class="register">
             <h3 class="section__title">Create an Account</h3>
-            <form class="form grid">
-              <input
-                type="text"
-                placeholder="Username"
-                class="form__input"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                class="form__input"
-              />
-              <input
-                type="password"
-                placeholder="Your Password"
-                class="form__input"
-              />
-              <input
-                type="password"
-                placeholder="Confirm Password"
-                class="form__input"
-              />
+            <span>${msg}</span>
+            <form:form modelAttribute="user" method="post" action="adduser" class="form grid">
+             
+              <form:input path="name" class="form__input" placeholder="Enter your name"/>
+              <form:input path="email" class="form__input" placeholder="Enter your email"/>
+             
+              <form:input path="phone" class="form__input" placeholder="Enter your phone"/>
+             
+              <form:password path="password" class="form__input" placeholder="Enter your password"/>
+             
               <div class="form__btn">
-                <button class="btn">Submit & Register</button>
+                <button class="btn" type="submit">Submit & Register</button>
               </div>
-            </form>
+            </form:form>
           </div>
         </div>
       </section>
