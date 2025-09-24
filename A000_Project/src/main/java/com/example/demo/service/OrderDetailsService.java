@@ -1,5 +1,8 @@
 package com.example.demo.service;
 
-public interface OrderDetailsService {
+import com.example.demo.model.OrderDetails;
 
+public interface OrderDetailsService {
+	
+	public void addOrUpdate(OrderDetails details);
 }

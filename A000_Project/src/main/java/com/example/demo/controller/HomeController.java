@@ -23,6 +23,8 @@ import com.example.demo.model.Product;
 import com.example.demo.model.User;
 import com.example.demo.service.CartService;
 import com.example.demo.service.CategoryService;
+import com.example.demo.service.OrderDetailsService;
+import com.example.demo.service.OrderService;
 import com.example.demo.service.ProductService;
 import com.example.demo.service.UserService;
 import com.example.demo.serviceimpl.OrderDetailsServiceImpl;
@@ -48,6 +50,12 @@ public class HomeController {
 	@Autowired
 	CartService cartService;
 
+	@Autowired
+	OrderService orderService;
+	
+	@Autowired
+	OrderDetailsService detailsService;
+	
 //	@GetMapping("/getproducts")
 //	public void loadProducts(HttpServletResponse resp) throws IOException
 //	{
@@ -72,7 +80,11 @@ public class HomeController {
 	}
 
 	@GetMapping("/accounts")
-	public String accounts() {
+	public String accounts(Model model) {
+		
+		User user = userService.userById(1);
+		List<Order> ord = orderService.orderByUser(user);
+		model.addAttribute("orders", ord);
 		return "accounts";
 	}
 
@@ -124,11 +136,6 @@ public class HomeController {
 	@GetMapping("/payment")
 	@ResponseBody
 	public void makePayment(@RequestParam("total") int total,HttpServletResponse resp) {
-		
-		
-			
-		
-
 		try {
 			PrintWriter pw  =resp.getWriter();
 			RazorpayClient razorpay = new RazorpayClient("rzp_test_R8LF6p6eS7swQn", "WsLBNmXfF7C4e9T4vWgZaLeN");
@@ -147,6 +154,46 @@ public class HomeController {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
+	}
+	
+	@GetMapping("/makeorder")
+	public void makeOrder(HttpServletRequest req,HttpServletResponse resp) throws IOException
+	{
+		String payid = req.getParameter("payid");
+		User user = userService.userById(1);
+		Order order = new Order();
+		order.setPayid(payid);
+		order.setDate(new Date());
+		order.setPaymentType("Online");
+		order.setStatus("pending");
+		order.setUser(user);
+		
+		Order createOrder =  orderService.addorUpdateOrder(order);
+		
+		List<Cart> carts =  cartService.cartByUser(user);
+		for(Cart c : carts)
+		{
+			OrderDetails details = new OrderDetails();
+			details.setOrder(createOrder);
+			details.setProduct(c.getProduct());
+			details.setPrice(c.getProduct().getPrice());
+			details.setQty(c.getQty());
+			
+			detailsService.addOrUpdate(details);
+			
+			Product pc = c.getProduct();
+			pc.setStock(c.getProduct().getStock()-c.getQty());
+			productService.addorUpdateProduct(pc);
+			cartService.delteCart(c.getId());
+			
+			
+		}
+		
+		
+		PrintWriter pw  =resp.getWriter();
+		pw.append("order Confirmed !!!");
 		
 		
 	}

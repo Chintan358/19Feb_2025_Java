@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -72,40 +73,49 @@
             <div class="tab__content" content id="orders">
               <h3 class="tab__header">Your Orders</h3>
               <div class="tab__body">
-                <table class="placed__order-table">
+              <c:forEach var="dt" items="${orders}">
+              
+             
+                <table class="placed__order-table mt-3">
                   <thead>
                     <tr>
-                      <th>Orders</th>
+                      <th>Orders ID</th>
+                      <th>${dt.getId() }</th>
                       <th>Date</th>
+                      <th>${dt.getDate()}</th>
+                      <th>Total</th>
+                    </tr>
+                     <tr>
                       <th>Status</th>
-                      <th>Totals</th>
-                      <th>Actions</th>
+                      <th>${dt.getStatus() }</th>
+                      <th>Pay Type</th>
+                      <th>${dt.getPaymentType()}</th>
+                      <th>0000</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>#1357</td>
-                      <td>March 19, 2022</td>
-                      <td>Processing</td>
-                      <td>$125.00</td>
-                      <td><a href="#" class="view__order">View</a></td>
+                     <th>Id</th>
+                     <th>Name</th>
+                     <th>Price</th>
+                     <th>Qty</th>
+                     <th>Total</th>
                     </tr>
+                    <c:forEach var="pdt" items="${dt.getDetails()}">
                     <tr>
-                      <td>#2468</td>
-                      <td>June 29, 2022</td>
-                      <td>Completed</td>
-                      <td>$364.00</td>
-                      <td><a href="#" class="view__order">View</a></td>
+                      <td>${pdt.getProduct().getId()}</td>
+                      <td>${pdt.getProduct().getName()}</td>
+                      <td>${pdt.getPrice()}</td>
+                      <td>${pdt.getQty() }</td>
+                      <td>${pdt.getQty()*pdt.getPrice()}</td>
                     </tr>
-                    <tr>
-                      <td>#2366</td>
-                      <td>August 02, 2022</td>
-                      <td>Completed</td>
-                      <td>$280.00</td>
-                      <td><a href="#" class="view__order">View</a></td>
-                    </tr>
+                    </c:forEach>
+                    
                   </tbody>
                 </table>
+                <br>
+                <br>
+                 </c:forEach>
               </div>
             </div>
             <div class="tab__content" content id="update-profile">
