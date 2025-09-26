@@ -1,3 +1,4 @@
+<%@page import="com.example.demo.model.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -39,9 +40,25 @@
             <li class="nav__item">
               <a href="compare" class="nav__link">Compare</a>
             </li>
-            <li class="nav__item">
+            <%
+            	User u = (User)session.getAttribute("user");
+            	if(u==null)
+            	{
+            		%>
+            		<li class="nav__item">
               <a href="loginregister" class="nav__link">Login</a>
             </li>
+            	<%}
+            	else
+            	{%>
+        		<li class="nav__item">
+          <a href="userLogout" class="nav__link">Logout</a>
+        </li>
+        	<%
+            		
+            	}
+            %>
+            
           </ul>
           <div class="header__search">
             <input

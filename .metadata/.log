@@ -6962,3 +6962,1253 @@ java.lang.NullPointerException: Cannot invoke "org.eclipse.core.expressions.IEva
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:627)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:575)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1431)
+!SESSION 2025-09-26 11:18:02.843 -----------------------------------------------
+eclipse.buildId=4.36.0.202506052058
+java.version=21.0.7
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-26 11:18:07.894
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.lemminx.uber-jar 4 0 2025-09-26 11:18:08.266
+!MESSAGE bundle org.eclipse.lemminx.uber-jar:0.31.0 (331) Component descriptor entry 'OSGI-INF/*.xml' not found
+
+!ENTRY ch.qos.logback.classic 1 0 2025-09-26 11:18:17.830
+!MESSAGE Logback config file: D:\Chintan_wok\19Feb_2025_java\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.100.20250418-1315.xml
+
+!ENTRY org.eclipse.ui 2 0 2025-09-26 11:18:18.637
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-09-26 11:18:18.637
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.ui 2 0 2025-09-26 11:18:19.290
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2025-09-26 11:18:19.290
+!MESSAGE Commands should really have a category: plug-in='org.springframework.tooling.boot.ls', id='spring.initializr.addStarters', categoryId='org.eclipse.lsp4e.commandCategory'
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-09-26 11:18:31.329
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Tops'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-09-26 11:18:35.347
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-09-26 11:18:35.993
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+
+!ENTRY org.eclipse.jface 2 0 2025-09-26 11:30:42.779
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-09-26 11:30:42.779
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.run"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.run"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-09-26 11:30:42.779
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.wst.server.launchShortcut.debug"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.rap.tools.launch.RAPLaunchShortcut.debug"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-09-26 11:32:01.202
+!MESSAGE Timed out after waiting for 300ms for semantic tokens from Language Servers
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaSemanticTokensProvider.computeSemanticTokens(LSJavaSemanticTokensProvider.java:68)
+	at org.eclipse.jdt.internal.ui.javaeditor.SemanticHighlightingReconciler.getContributedSemanticTokens(SemanticHighlightingReconciler.java:423)
+	at org.eclipse.jdt.internal.ui.javaeditor.SemanticHighlightingReconciler.reconciled(SemanticHighlightingReconciler.java:470)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.reconciled(CompilationUnitEditor.java:1674)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconciled(JavaReconcilingStrategy.java:228)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconciled(JavaCompositeReconcilingStrategy.java:171)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.initialReconcile(JavaCompositeReconcilingStrategy.java:147)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.initialProcess(MonoReconciler.java:100)
+	at org.eclipse.jdt.internal.ui.text.JavaReconciler.initialProcess(JavaReconciler.java:425)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:177)
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-09-26 11:32:06.905
+!MESSAGE Timed out after waiting for 300ms for semantic tokens from Language Servers
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1960)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2095)
+	at org.eclipse.lsp4e.jdt.LSJavaSemanticTokensProvider.computeSemanticTokens(LSJavaSemanticTokensProvider.java:68)
+	at org.eclipse.jdt.internal.ui.javaeditor.SemanticHighlightingReconciler.getContributedSemanticTokens(SemanticHighlightingReconciler.java:423)
+	at org.eclipse.jdt.internal.ui.javaeditor.SemanticHighlightingReconciler.reconciled(SemanticHighlightingReconciler.java:470)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.reconciled(CompilationUnitEditor.java:1674)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconciled(JavaReconcilingStrategy.java:228)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconciled(JavaCompositeReconcilingStrategy.java:171)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:115)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+
+!ENTRY org.eclipse.jface 2 0 2025-09-26 11:33:37.708
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-09-26 11:33:37.708
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.jdt.ui.navigate.open.type"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolInWorkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		WorkbenchHandlerServiceHandler("org.eclipse.lsp4e.symbolInWorkspace"),
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:51:38.224
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=287, length=2, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:51:38.664
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=287, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:51:39.208
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=287, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:51:39.722
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=287, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:51:40.288
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=287, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:51:40.759
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=287, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:51:41.258
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=287, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:51:41.728
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=287, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:15.415
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=493, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:15.415
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=514, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:15.415
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=534, length=7, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.lsp4e 2 0 2025-09-26 11:52:40.570
+!MESSAGE Javadoc unavailable. Failed to obtain it.
+!STACK 0
+java.lang.InterruptedException
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:386)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2096)
+	at org.eclipse.lsp4e.jdt.LSJavaHoverProvider.getHoverInfo2(LSJavaHoverProvider.java:66)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:40.616
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:41.619
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:43.535
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:43.999
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:44.904
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:47.808
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:48.271
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:48.738
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:49.434
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:50.225
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:50.742
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:50.743
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=2, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:51.248
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:51.249
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:51.734
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:51.734
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:52.804
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:52.804
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:53.325
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:53.325
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:54.613
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:54.613
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:55.110
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:55.110
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:55.591
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:55.591
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:56.163
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:56.163
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:56.635
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:52:56.635
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:10.398
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=493, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:10.398
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=514, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:10.398
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=534, length=7, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:15.259
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:15.259
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:15.758
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:15.758
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:16.314
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:16.314
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:16.314
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=3, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:16.790
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:16.790
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:16.790
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=6, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:17.321
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:17.321
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:17.321
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:18.012
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:18.012
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:18.012
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:18.322
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:18.322
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:18.322
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:18.977
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:18.977
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:18.978
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:20.814
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:20.814
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:20.815
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:21.583
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:21.584
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:21.584
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:22.131
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:22.131
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:22.131
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:22.682
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:22.682
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:22.683
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:23.441
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:23.441
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:23.442
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:24.261
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:24.262
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:24.262
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:24.899
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:24.900
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:24.900
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:25.402
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:25.403
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:25.403
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:25.403
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=349, length=2, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:25.968
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:25.969
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:25.969
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:25.969
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=349, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:26.551
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:26.552
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:26.552
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:26.552
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=349, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:37.886
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=493, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:37.886
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=514, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:53:37.887
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=534, length=7, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:06.850
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:06.850
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:06.850
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:06.850
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=349, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:07.878
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=284, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:07.879
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=306, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:07.879
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=328, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:07.879
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=349, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:08.918
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:08.918
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:08.919
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:08.919
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:09.718
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:09.718
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:09.718
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:09.718
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:11.838
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:11.839
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:11.839
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:11.839
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:12.329
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:12.329
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:12.329
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:12.330
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:12.878
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:12.878
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:12.878
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:12.878
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:14.649
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:14.650
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:14.650
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:14.650
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:15.203
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:15.203
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:15.204
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:15.204
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:15.654
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:15.654
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:15.654
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:15.655
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:16.204
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:16.204
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:16.205
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:16.205
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:18.430
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:18.430
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:18.430
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:18.431
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:18.956
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:18.956
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:18.956
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:18.956
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:19.519
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:19.520
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:19.520
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:19.520
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:20.328
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:20.328
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:20.328
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:20.329
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:21.376
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:21.377
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:21.378
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:21.378
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:21.839
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:21.839
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:21.840
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:21.840
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:22.392
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:22.393
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:22.393
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:22.393
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:23.430
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:23.431
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:23.431
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:23.431
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:23.943
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:23.943
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:23.944
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:23.944
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:24.980
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:24.980
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:24.980
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:24.981
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:25.484
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:25.485
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:25.486
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:25.486
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:26.503
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:26.504
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:26.504
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:26.504
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:27.010
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:27.011
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:27.011
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:27.011
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:28.588
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:28.589
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:28.589
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:28.589
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:29.079
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:29.079
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:29.080
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:29.080
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:29.630
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:29.630
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:29.630
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:29.631
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:30.089
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:30.089
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:30.090
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:30.090
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:30.641
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:30.642
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:30.642
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:30.643
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:31.155
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:31.155
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:31.156
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:31.156
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:32.466
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:32.466
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:32.466
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:32.467
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:33.004
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:33.004
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:33.005
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:33.005
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:33.732
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:33.732
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:33.733
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:33.733
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:34.226
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:34.227
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:34.227
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:34.227
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:35.261
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:35.262
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:35.262
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:35.262
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:35.907
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:35.908
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:35.908
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:35.908
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:36.408
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:36.408
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:36.409
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:36.409
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:37.197
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:37.198
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:37.198
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:37.198
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:37.757
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:37.758
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:37.758
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:37.758
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:39.018
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:39.018
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:39.019
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:39.019
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:39.506
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=341, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:39.507
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=363, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:39.507
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=385, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:39.507
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=406, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:41.565
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=378, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:41.565
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=400, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:41.565
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=422, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:41.566
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=443, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:42.585
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=378, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:42.585
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=400, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:42.585
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=422, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:42.585
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=443, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:44.944
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=378, length=4, tokenType=CLASS]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:44.944
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=400, length=5, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:44.945
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=422, length=8, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.jdt.ui 4 10001 2025-09-26 11:54:44.945
+!MESSAGE Cannot find semantic highlighting for SemanticToken[ofset=443, length=4, tokenType=PARAMETER_VARIABLE]
+
+!ENTRY org.eclipse.e4.ui.workbench 4 2 2025-09-26 12:22:19.895
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.e4.ui.workbench".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.core.expressions.IEvaluationContext.getDefaultVariable()" because "this.evalContext" is null
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.getCurrentState(LegacyHandlerService.java:564)
+	at org.eclipse.egit.ui.internal.selection.SelectionUtils.getEvaluationContext(SelectionUtils.java:534)
+	at org.eclipse.egit.ui.internal.selection.SelectionUtils.getStructuredSelection(SelectionUtils.java:237)
+	at org.eclipse.egit.ui.internal.selection.RepositorySourceProvider.selectionChanged(RepositorySourceProvider.java:90)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.notifyListeners(SelectionService.java:266)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.handleSelectionChanged(SelectionService.java:98)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.lambda$0(SelectionService.java:72)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$1.run(SelectionAggregator.java:123)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator.notifyListeners(SelectionAggregator.java:120)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$5.lambda$0(SelectionAggregator.java:220)
+	at org.eclipse.e4.core.contexts.RunAndTrack.runExternalCode(RunAndTrack.java:59)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$5.changed(SelectionAggregator.java:220)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:105)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.runAndTrack(EclipseContext.java:340)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator.track(SelectionAggregator.java:205)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator.setPart(SelectionAggregator.java:114)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:95)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:103)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.processScheduled(EclipseContext.java:358)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:181)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.clearContext(PartRenderingEngine.java:982)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:955)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.disposeWidget(ContributedPartRenderer.java:272)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:934)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.disposeWidget(ElementReferenceRenderer.java:113)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:934)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:889)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.ui.internal.WorkbenchWindow.hardClose(WorkbenchWindow.java:2076)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1717)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$5(WorkbenchWindow.java:1741)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1741)
+	at org.eclipse.ui.internal.Workbench$11.run(Workbench.java:1177)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1160)
+	at org.eclipse.ui.internal.Workbench.lambda$5(Workbench.java:1466)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1466)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1437)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1714)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$5(WorkbenchWindow.java:1741)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1741)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1750)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$2(WorkbenchWindow.java:505)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.lambda$4(WBWRenderer.java:574)
+	at org.eclipse.swt.events.ShellListener$2.shellClosed(ShellListener.java:101)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:136)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4338)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1214)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1238)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1223)
+	at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:273)
+	at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1566)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4781)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:336)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1494)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2387)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5106)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:513)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4881)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:336)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1494)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2387)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5106)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:513)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4881)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:336)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1494)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2387)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5106)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3722)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:678)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:185)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:627)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:575)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1431)
+
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2025-09-26 12:22:19.899
+!MESSAGE Cannot invoke "org.eclipse.core.expressions.IEvaluationContext.getDefaultVariable()" because "this.evalContext" is null
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "org.eclipse.core.expressions.IEvaluationContext.getDefaultVariable()" because "this.evalContext" is null
+	at org.eclipse.ui.internal.handlers.LegacyHandlerService.getCurrentState(LegacyHandlerService.java:564)
+	at org.eclipse.egit.ui.internal.selection.SelectionUtils.getEvaluationContext(SelectionUtils.java:534)
+	at org.eclipse.egit.ui.internal.selection.SelectionUtils.getStructuredSelection(SelectionUtils.java:237)
+	at org.eclipse.egit.ui.internal.selection.RepositorySourceProvider.selectionChanged(RepositorySourceProvider.java:90)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.notifyListeners(SelectionService.java:266)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.handleSelectionChanged(SelectionService.java:98)
+	at org.eclipse.ui.internal.e4.compatibility.SelectionService.lambda$0(SelectionService.java:72)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$1.run(SelectionAggregator.java:123)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator.notifyListeners(SelectionAggregator.java:120)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$5.lambda$0(SelectionAggregator.java:220)
+	at org.eclipse.e4.core.contexts.RunAndTrack.runExternalCode(RunAndTrack.java:59)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator$5.changed(SelectionAggregator.java:220)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:105)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.runAndTrack(EclipseContext.java:340)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator.track(SelectionAggregator.java:205)
+	at org.eclipse.e4.ui.internal.workbench.SelectionAggregator.setPart(SelectionAggregator.java:114)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:56)
+	at org.eclipse.e4.core.internal.contexts.ContextObjectSupplier$ContextInjectionListener.update(ContextObjectSupplier.java:95)
+	at org.eclipse.e4.core.internal.contexts.TrackableComputationExt.update(TrackableComputationExt.java:103)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.processScheduled(EclipseContext.java:358)
+	at org.eclipse.e4.core.internal.contexts.EclipseContext.dispose(EclipseContext.java:181)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.clearContext(PartRenderingEngine.java:982)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:955)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.disposeWidget(ContributedPartRenderer.java:272)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:934)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.disposeWidget(ElementReferenceRenderer.java:113)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:934)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:889)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.ui.internal.WorkbenchWindow.hardClose(WorkbenchWindow.java:2076)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1717)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$5(WorkbenchWindow.java:1741)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1741)
+	at org.eclipse.ui.internal.Workbench$11.run(Workbench.java:1177)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1160)
+	at org.eclipse.ui.internal.Workbench.lambda$5(Workbench.java:1466)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1466)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1437)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1714)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$5(WorkbenchWindow.java:1741)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1741)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1750)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$2(WorkbenchWindow.java:505)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.lambda$4(WBWRenderer.java:574)
+	at org.eclipse.swt.events.ShellListener$2.shellClosed(ShellListener.java:101)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:136)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4338)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1214)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1238)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1223)
+	at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:273)
+	at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1566)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4781)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:336)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1494)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2387)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5106)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:513)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4881)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:336)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1494)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2387)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5106)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:513)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4881)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:336)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1494)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2387)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5106)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3722)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:678)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:185)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:627)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:575)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1431)

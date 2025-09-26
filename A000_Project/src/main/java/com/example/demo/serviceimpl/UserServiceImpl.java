@@ -39,4 +39,10 @@ public class UserServiceImpl implements UserService {
 		repo.deleteById(id);
 	}
 
+	@Override
+	public User loginUser(User u) {
+		
+		return repo.loginuser(u.getEmail(), u.getPassword(), u.getRole());
+	}
+
 }

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.hibernate.Session;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,6 +27,7 @@ import com.example.demo.service.CategoryService;
 import com.example.demo.service.OrderDetailsService;
 import com.example.demo.service.OrderService;
 import com.example.demo.service.ProductService;
+import com.example.demo.service.RoleService;
 import com.example.demo.service.UserService;
 import com.example.demo.serviceimpl.OrderDetailsServiceImpl;
 import com.google.gson.Gson;
@@ -34,10 +36,12 @@ import com.razorpay.RazorpayException;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class HomeController {
 
+	User sessionUser;
 	@Autowired
 	CategoryService categoryService;
 
@@ -56,6 +60,9 @@ public class HomeController {
 	@Autowired
 	OrderDetailsService detailsService;
 	
+	@Autowired
+	RoleService roleService;
+	
 //	@GetMapping("/getproducts")
 //	public void loadProducts(HttpServletResponse resp) throws IOException
 //	{
@@ -67,8 +74,10 @@ public class HomeController {
 //	}
 
 	@GetMapping("/")
-	public String index(Model model, @RequestParam(value = "catid", required = false, defaultValue = "0") int cid) {
+	public String index(Model model, @RequestParam(value = "catid", required = false, defaultValue = "0") int cid,HttpServletRequest req) {
 
+		HttpSession session = req.getSession();
+		sessionUser = (User)session.getAttribute("user");
 		if (cid == 0) {
 			model.addAttribute("products", productService.viewAllProducts());
 		} else {
@@ -82,7 +91,7 @@ public class HomeController {
 	@GetMapping("/accounts")
 	public String accounts(Model model) {
 		
-		User user = userService.userById(1);
+		User user = userService.userById(sessionUser.getId());
 		List<Order> ord = orderService.orderByUser(user);
 		model.addAttribute("orders", ord);
 		return "accounts";
@@ -91,23 +100,41 @@ public class HomeController {
 	// ********************cart*******************
 	@GetMapping("cart")
 	public String cart(Model model) {
-		model.addAttribute("carts", cartService.cartByUser(userService.userById(1)));
+		
+		if(sessionUser==null)
+		{
+			model.addAttribute("user", new User());
+			return "login-register";
+		}
+		else
+		{
+		model.addAttribute("carts", cartService.cartByUser(sessionUser));
 		return "cart";
+		}
 	}
 
 	@GetMapping("/addtocart")
 	public void addtocart(@RequestParam("id") int pid, HttpServletResponse resp) throws IOException {
+		
 		PrintWriter pw = resp.getWriter();
+		if(sessionUser==null)
+		{
+			pw.append("Please login first !!!");
+		}
+		
+		else {
+			
+		
 
 		Product p = productService.productById(pid);
-		User u = userService.userById(1);
+		User u = userService.userById(sessionUser.getId());
 
 		Cart cart = new Cart();
 		cart.setProduct(p);
 		cart.setUser(u);
 		cart.setQty(1);
 
-		Cart ct = cartService.existByUserAndProduct(u, p);
+		Cart ct = cartService.existByUserAndProduct(sessionUser, p);
 		if (ct != null) {
 			ct.setQty(ct.getQty() + 1);
 			cartService.addorUpdateCart(ct);
@@ -116,6 +143,7 @@ public class HomeController {
 		}
 
 		pw.append("Product addded into cart !!!!");
+		}
 	}
 
 	@GetMapping("/changeqty")
@@ -162,7 +190,7 @@ public class HomeController {
 	public void makeOrder(HttpServletRequest req,HttpServletResponse resp) throws IOException
 	{
 		String payid = req.getParameter("payid");
-		User user = userService.userById(1);
+		User user = userService.userById(sessionUser.getId());
 		Order order = new Order();
 		order.setPayid(payid);
 		order.setDate(new Date());
@@ -228,10 +256,38 @@ public class HomeController {
 
 	@PostMapping("/adduser")
 	public String adduser(@ModelAttribute("user") User u, Model model) {
+		
+		u.setRole(roleService.roleById(2));
 		userService.addorUpdateUser(u);
 		model.addAttribute("msg", "Registration success !!!");
 		model.addAttribute("user", new User());
 		return "login-register";
+	}
+	
+	@PostMapping("/loginuser")
+	public String loginuser(@ModelAttribute("user") User u, Model model,HttpServletRequest req)
+	{
+		u.setRole(roleService.roleById(2));
+		User user =  userService.loginUser(u);
+		if(user==null)
+		{
+			model.addAttribute("loginerr", "Invalid credentials");
+			return "login-register";
+		}
+		else {
+			HttpSession session = req.getSession();
+			session.setAttribute("user", user);
+			return "redirect:/";
+		}
+		
+	}
+	
+	@GetMapping("userLogout")
+	public String logoutUser(HttpServletRequest req)
+	{
+		HttpSession session = req.getSession(false);
+		session.invalidate();
+		return "redirect:/";
 	}
 
 	// ****************user end*************

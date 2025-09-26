@@ -43,21 +43,17 @@
         <div class="login-register__container container grid">
           <div class="login">
             <h3 class="section__title">Login</h3>
-            <form class="form grid">
-              <input
-                type="email"
-                placeholder="Your Email"
-                class="form__input"
-              />
-              <input
-                type="password"
-                placeholder="Your Password"
-                class="form__input"
-              />
+             <form:form modelAttribute="user" method="post" action="loginuser" class="form grid">
+             
+              <form:input path="email" class="form__input" placeholder="Enter your email"/>
+             
+              
+              <form:password path="password" class="form__input" placeholder="Enter your password"/>
+             
               <div class="form__btn">
-                <button class="btn">Login</button>
+                <button class="btn" type="submit">Login</button>
               </div>
-            </form>
+            </form:form>
           </div>
           <div class="register">
             <h3 class="section__title">Create an Account</h3>

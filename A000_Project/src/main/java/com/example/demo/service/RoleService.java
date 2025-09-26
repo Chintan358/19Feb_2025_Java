@@ -1,5 +1,8 @@
 package com.example.demo.service;
 
-public interface RoleService {
+import com.example.demo.model.Role;
 
+public interface RoleService {
+		
+	public Role roleById(int id);
 }
