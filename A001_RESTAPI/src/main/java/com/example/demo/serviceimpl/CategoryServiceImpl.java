@@ -21,4 +21,10 @@ public class CategoryServiceImpl implements CategoryService {
 		return categoryRepo.findAll();
 	}
 
+	@Override
+	public Category catById(int id) {
+		// TODO Auto-generated method stub
+		return categoryRepo.findById(id).orElseThrow();
+	}
+
 }

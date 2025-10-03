@@ -10,4 +10,5 @@ import com.example.demo.model.Category;
 public interface CategoryService {
 	
 	public List<Category> allCategory();
+	public Category catById(int id);
 }
