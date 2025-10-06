@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,11 +17,14 @@ import com.example.demo.dto.CategoryDto;
 import com.example.demo.dto.ProductDto;
 import com.example.demo.model.Category;
 import com.example.demo.model.Product;
+import com.example.demo.repo.ProductRepo;
 import com.example.demo.service.CategoryService;
 import com.example.demo.service.ProductService;
 
 @RestController
 public class ProductController {
+
+    private final ProductRepo productRepo;
 
     private final StudentController studentController;
 	
@@ -30,8 +34,9 @@ public class ProductController {
 	@Autowired
 	CategoryService categoryService;
 
-    ProductController(StudentController studentController) {
+    ProductController(StudentController studentController, ProductRepo productRepo) {
         this.studentController = studentController;
+        this.productRepo = productRepo;
     }
 	
 	@GetMapping("/products")
@@ -70,6 +75,36 @@ public class ProductController {
 		p.setCategory(c);
 		
 		Product product = productService.addProduct(p);
+		
+		ProductDto dto = new ProductDto();
+		dto.setId(product.getId());
+		dto.setName(product.getName());
+		dto.setPrice(product.getPrice());
+		dto.setQty(product.getQty());
+		
+		CategoryDto cdto = new CategoryDto();
+		cdto.setId(product.getCategory().getId());
+		cdto.setName(product.getCategory().getName());
+		
+		
+		dto.setCategoryDto(cdto);
+		
+		return new ResponseEntity<>(dto,HttpStatus.CREATED);
+		
+	}
+	
+	@PutMapping("/products/category/{catid}/{pid}")
+	public ResponseEntity<ProductDto> updateProduct(@RequestBody Product p,
+			@PathVariable("catid") int cid,
+			@PathVariable("pid") int pid
+			)
+	{
+		
+//		System.out.println(cid+" "+pid+" "+p.getId());
+		Category c  =categoryService.catById(cid);
+		p.setCategory(c);
+		
+		Product product = productService.updateProduct(p,pid);
 		
 		ProductDto dto = new ProductDto();
 		dto.setId(product.getId());

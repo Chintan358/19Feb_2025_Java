@@ -1,3 +1,7 @@
+/**
+ * This Java class is a Spring REST controller that retrieves a list of categories from a service and
+ * converts them into DTOs to be returned as a response.
+ */
 package com.example.demo.controller;
 
 import java.util.ArrayList;
