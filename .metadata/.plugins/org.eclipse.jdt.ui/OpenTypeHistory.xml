@@ -12,4 +12,10 @@
     <typeInfo handle="=A000_Project/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{OrderService.java[OrderService" modifiers="513" timestamp="1758696564015"/>
     <typeInfo handle="=A000_Project/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.repo{OrderDetailsRepo.java[OrderDetailsRepo" modifiers="513" timestamp="1757312551539"/>
     <typeInfo handle="=A000_Project/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{OrderDetailsService.java[OrderDetailsService" modifiers="513" timestamp="1758695687856"/>
+    <typeInfo handle="=A000_BlogApp/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{UserService.java[UserService" modifiers="513" timestamp="1759904469568"/>
+    <typeInfo handle="=A000_BlogApp/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{BlogCategoryService.java[BlogCategoryService" modifiers="513" timestamp="1759904549883"/>
+    <typeInfo handle="=A000_BlogApp/C:\/Program Files\/Java\/jdk-21\/lib\/jrt-fs.jar`java.base=/javadoc_location=/https:\/\/docs.oracle.com\/en\/java\/javase\/21\/docs\/api\/=/=/maven.pomderived=/true=/&lt;java.util.concurrent(BlockingQueue.class[BlockingQueue" modifiers="1537" timestamp="1753099223124"/>
+    <typeInfo handle="=A000_BlogApp/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{BlogService.java[BlogService" modifiers="513" timestamp="1759904545762"/>
+    <typeInfo handle="=A000_BlogApp/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.repo{BlogRepo.java[BlogRepo" modifiers="513" timestamp="1759904325031"/>
+    <typeInfo handle="=A000_BlogApp/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.service{ReviewService.java[ReviewService" modifiers="513" timestamp="1759904563685"/>
 </typeInfoHistroy>
