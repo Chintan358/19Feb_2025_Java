@@ -2,7 +2,9 @@ package com.example.demo.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,21 +24,27 @@ import com.example.demo.service.RoleService;
 public class RoleController {
 
 	@Autowired
-	RoleService roleService;	
+	RoleService roleService;
+	
+	@Autowired
+	ModelMapper mapper;
 	
 	@GetMapping("/")
 	public ResponseEntity<List<RoleDto>> allRoles()
 	{
 		List<Role> allRoles = roleService.allRoles();
-		List<RoleDto> dtos = new ArrayList<>();
-		for(Role r : allRoles)
-		{
-			RoleDto rd = new RoleDto();
-			rd.setId(r.getId());
-			rd.setRole(r.getRole());
-			
-			dtos.add(rd);
-		}
+//		List<RoleDto> dtos = new ArrayList<>();
+//		for(Role r : allRoles)
+//		{
+//			RoleDto rd = new RoleDto();
+//			rd.setId(r.getId());
+//			rd.setRole(r.getRole());
+//			
+//			dtos.add(rd);
+//		}
+		
+		List<RoleDto> dtos = allRoles.stream().map(role->mapper.map(role, RoleDto.class))
+				.collect(Collectors.toList());
 		
 		return new ResponseEntity<>(dtos,HttpStatus.OK);
 		
@@ -47,9 +55,11 @@ public class RoleController {
 	{
 		Role createdRole = roleService.addRole(role);
 		
-		RoleDto dto = new RoleDto();
-		dto.setId(createdRole.getId());
-		dto.setRole(createdRole.getRole());
+//		RoleDto dto = new RoleDto();
+//		dto.setId(createdRole.getId());
+//		dto.setRole(createdRole.getRole());
+		RoleDto dto = mapper.map(createdRole, RoleDto.class);
+		
 		
 		return new ResponseEntity<>(dto,HttpStatus.CREATED);
 		
